@@ -28,11 +28,11 @@
             <div class="work-top">
                 <h3>Latest Works</h3>
                 <ul class="blog-cate">
-                    <li><a href="javascript:;" class="active">All</a></li>
+                    <li><a href="#" class="<?php echo !$cate_id?'active':'';?>">All</a></li>
                     <?php
                         foreach($categories as $category){
                     ?>
-                            <li><a href="javascript:;" data-id="<?php echo $category->cate_id;?>"><?php echo $category->cate_name;?></a></li>
+                            <li><a class="<?php echo $cate_id==$category->cate_id?'active':'';?>" href="welcome/index?cateId=<?php echo $category->cate_id;?>"><?php echo $category->cate_name;?></a></li>
                     <?php
                         }
                     ?>
