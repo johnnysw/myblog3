@@ -16,6 +16,13 @@ class Blog_model extends CI_Model {
 	}
 
 	public function  get_by_id($blog_id){
-		return $this -> db -> get_where('t_blog', array('blog_id'=>$blog_id)) -> row();
+		//return $this -> db -> get_where('t_blog', array('blog_id'=>$blog_id)) -> row();
+		$this -> db -> select('blog.*, cate.cate_name');
+		$this -> db -> from('t_blog blog');
+		$this -> db -> join('t_blog_category cate', 'blog.cate_id=cate.cate_id');;
+		$this -> db -> where('blog.blog_id', $blog_id);
+		return $this -> db -> get() -> row();
+		/*$query = $this -> db -> query('select blog.*, cate.cate_name from t_blog blog, t_blog_category cate where blog.cate_id=cate.cate_id and blog.blog_id='.$blog_id);
+		return $query -> row();*/
 	}
 }

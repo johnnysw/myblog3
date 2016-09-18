@@ -43,7 +43,7 @@
                     foreach($blogs as $blog){
                 ?>
                         <li class="blog third">
-                            <a href="#">
+                            <a href="welcome/view_blog?blogId=<?php echo $blog->blog_id;?>">
                                 <img src="<?php echo $blog->img;?>" alt="">
                                 <div class="blog-desc">
                                     <p class="blog-title"><?php echo $blog->title;?></p>
@@ -64,6 +64,6 @@
     <div id="services"></div>
     <div id="meet"></div>
     <footer id="footer"></footer>
-<script src="js/require.js" data-main="js/index"></script>
+    <script src="js/require.js" data-main="js/index"></script>
 </body>
 </html>
