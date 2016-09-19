@@ -25,4 +25,9 @@ class Blog_model extends CI_Model {
 		/*$query = $this -> db -> query('select blog.*, cate.cate_name from t_blog blog, t_blog_category cate where blog.cate_id=cate.cate_id and blog.blog_id='.$blog_id);
 		return $query -> row();*/
 	}
+	public function get_by_page($offset=0){
+		$this -> db -> order_by('blog_id', 'desc');
+		$this -> db -> limit(6, $offset);
+		return $this -> db -> get('t_blog') -> result();
+	}
 }
