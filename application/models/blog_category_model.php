@@ -25,7 +25,7 @@ class Blog_category_model extends CI_Model {
 	}
 
 	public function delete_selected($cate_ids_str){ //"1,2"
-		$cate_ids = explode(',', $cate_ids_str);
+		$cate_ids = explode(',', $cate_ids_str);//[1,2]
 		$this -> db -> where_in('cate_id', $cate_ids);
 		$this -> db -> update('t_blog_category', array(
 			'is_delete' => '1'

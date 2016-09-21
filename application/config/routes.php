@@ -41,15 +41,21 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 $route['admin'] = 'admin/welcome/login';
-$route['admin/login'] = 'admin/welcome/login';
-$route['admin/index'] = 'admin/welcome/index';
+$route['admin/blog/(:num)'] = 'admin/welcome/mgr_blog/$1';
+$route['admin/blog/(:num)/(:num)'] = 'admin/welcome/mgr_blog/$1/$2';
+$route['admin/(:any)'] = 'admin/welcome/$1';
 $route['admin/category'] = 'admin/welcome/mgr_category';
 $route['admin/blog'] = 'admin/welcome/mgr_blog';
 $route['admin/comment'] = 'admin/welcome/mgr_comment';
+
+
+/*$route['admin/login'] = 'admin/welcome/login';
+$route['admin/index'] = 'admin/welcome/index';
+
 $route['admin/add_category'] = 'admin/welcome/add_category';
 $route['admin/save_category'] = 'admin/welcome/save_category';
 $route['admin/delete_category'] = 'admin/welcome/delete_category';
-$route['admin/delete_selected_category'] = 'admin/welcome/delete_selected_category';
+$route['admin/delete_selected_category'] = 'admin/welcome/delete_selected_category';*/
 
 
 /* End of file routes.php */
