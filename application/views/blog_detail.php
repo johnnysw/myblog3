@@ -67,6 +67,5 @@
 		</div>
 	</div>
 	<script src="js/require.js" data-main="js/blog_detail"></script>
-
 </body>
 </html>
