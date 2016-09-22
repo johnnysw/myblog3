@@ -76,3 +76,8 @@
 #works .blog:hover .mask{
     transform: translateX(0);
 }
+#footer{
+    height: 500px;
+    background: #279f7c;
+    clear: both;
+}

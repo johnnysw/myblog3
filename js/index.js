@@ -1,4 +1,4 @@
-require(['jquery', 'search', 'gotop'], function($){
+require(['jquery', 'search', 'gotop', 'jsx!footer'], function($){
     $(function(){
         $('.blog-cate a').on('click', function(){
             $(this).parent().siblings().children('a').removeClass('active');
