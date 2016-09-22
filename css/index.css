@@ -81,3 +81,6 @@
     background: #279f7c;
     clear: both;
 }
+::-webkit-input-placeholder{
+    color: gray;
+}
